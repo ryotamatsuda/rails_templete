@@ -1,0 +1,18 @@
+<h1>tweet Index</h1>
+<table>
+  <thead>
+    <tr>
+      <th>content</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @all_tweets.each do |tweet| %>
+    <tr>
+      <td><%= tweet.content %></td>
+      <td><%= link_to "Show", tweet_path(tweet.id) %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= render 'tweets/new_tweet_form' %>
